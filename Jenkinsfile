@@ -1,7 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'alpine'
+            image 'jenkins/agent'
+            labels 'docker-agent'
         }
     }
     stages {
