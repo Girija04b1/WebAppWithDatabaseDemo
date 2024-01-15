@@ -6,6 +6,12 @@ pipeline {
             }
     }
     stages {
+       stage('Install Docker') {
+            steps {
+                sh 'sudo apt-get update'
+                sh 'sudo apt-get install docker-ce docker-ce-cli containerd.io'
+            }
+        }
         stage('Clone repository') {
             steps {
                 git 'https://github.com/HoussemDellai/WebAppWithDatabaseDemo.git'
