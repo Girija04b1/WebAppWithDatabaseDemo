@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker {
             image 'jenkins/agent'
-            labels 'docker-agent'
         }
     }
     stages {
