@@ -8,8 +8,7 @@ pipeline {
         stage('Clone repository') {
             steps {
                 git 'https://github.com/HoussemDellai/WebAppWithDatabaseDemo.git'
-                sh 'cd WebAppWithDatabaseDemo && ls'
-            }
+                }
         }
         stage('Run SonarScanner') {
             steps {
